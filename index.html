@@ -52,20 +52,30 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">High-performance CPU Cloth Simulation Using Domain-decomposed Projective Dynamics</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zixuan Lu</a><sup>1*</sup>, </span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Ziheng Liu</a><sup>1*</sup>, </span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lei Lan</a><sup>1</sup>, </span>
+                  <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Huamin Wang</a><sup>4</sup>, </a></span>
+                  <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuko Ishiwaka</a><sup>5</sup>, </a></span>
+                  <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chenfanfu Jiang</a><sup>3</sup>, </a></span>
+                  <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Kui Wu</a><sup>2</sup>, </a></span>
+              <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yin Yang</a><sup>1</sup>. </a></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block"><sup>1</sup> University of Utah, <sup>2</sup> LIGHTSPEED, <sup>3</sup> UCLA, <sup>4</sup> Style3D Research, <sup>5</sup> SoftBank<br>SIGGRAPH 2025 </span>
+                    <span class="eql-cntrb" style="color: red;"><br>[Best paper honor mentioned award] [Technical paper trailer]</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -81,39 +91,15 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <span class="link-block">
+                        <a href="https://youtu.be/INF-p3T1PZ0?si=y1J4YPwQ3d9Dw57k" target="_blank"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-video"></i>
+                        </span>
+                        <span>Video</span>
+                      </a>
                     </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -148,7 +134,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Whenever the concept of high-performance cloth simulation is brought up, GPU acceleration is almost always the first that comes to mind. Leveraging immense parallelization, GPU algorithms have demonstrated significant success recently, whereas CPU methods are somewhat overlooked. Indeed, the need for an efficient CPU simulator is evident and pressing. In many scenarios, high-end GPUs may be unavailable or are already allocated to other tasks, such as rendering and shading. A high-performance CPU alternative can greatly boost the overall system capability and user experience. Inspired by this demand, this paper proposes a CPU algorithm for high-resolution cloth simulation. By partitioning the garment model into multiple (but not massive) sub-meshes or domains, we assign per-domain computations to individual CPU processors. Borrowing the idea of projective dynamics that breaks the computation into global and local steps, our key contribution is a new parallelization paradigm at domains for both global and local steps so that domain-level calculations are sequential and lightweight. The CPU has much fewer processing units than a GPU. Our algorithm mitigates this disadvantage by wisely balancing the scale of the parallelization and convergence. We validate our method in a wide range of simulation problems involving high-resolution garment models. Performance-wise, our method is at least one order faster than existing CPU methods, and it delivers a similar performance compared with the state-of-the-art GPU algorithms in many examples, but without using a GPU.
           </p>
         </div>
       </div>
@@ -205,13 +191,13 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Video Demo</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://youtube.com/embed/INF-p3T1PZ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -255,30 +241,23 @@
 <!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{2025highperformance,
+  title={High-performance CPU Cloth Simulation Using Domain-decomposed Projective Dynamics},
+  author={Lu, Zixuan and Liu, Ziheng and Lan, Lei and Wang, Huamin and Ishiwaka, Yuko and Jiang, Chenfanfu and Wu, Kui and Yang, Yin},
+  journal={ACM Transactions on Graphics},
+  volume={44},
+  number={4},
+  pages={1--17},
+  year={2025},
+  month={August},
+  publisher={ACM},
+  doi={10.1145/3731182},
+  articleno={51}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
